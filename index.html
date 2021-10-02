@@ -1,0 +1,127 @@
+
+    <html>
+        <head>
+            <title> Title of My First HTML page </title>
+				<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        </head>
+        <body>
+            <H1> <center> <u> Watercolour map of Berlin</u> <center>	 </H1>
+            <p> <center>   <font size="+1">Hey Legend, I made this map of Berlin for you in case your phone breaks again or something haha. I indicated a few places that Ive been told are cool, but this is just a start. There is a lot of exploring to do!</font>  <center><p>	
+				<center><div id="ljka" style="width: 1700px; height: 500px"></div><center>
+					<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>	
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-hash/0.2.1/leaflet-hash.js"></script>
+			<p><center> <font size="+1">My idea was that you can add the coolest places you can find to the map, so I go one day and maybe visit them, since i cant come this time. All in all, have a lot of fun, explore, get lost, meet cool people and take a lot of photos. Also,  share the playlist that you will make in berlin with meeee! <font><center></p>
+				<style type="text/css">
+									body {background-color: #FFDCF4;
+													color: #9E74D0;},
+									p {
+										font-family: baskerville-old-face;
+										color:  #936ED4	;}
+									H1 {
+										font-family: baskerville-old-face;
+										color: #936ED4;}
+			</style>
+			
+			<script>        
+			const map = L.map('ljka').setView([52.5317,13.4473], 12);
+
+        
+				const backgroundMap =  L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+						attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+						subdomains: 'abcd',
+						minZoom: 9,
+						maxZoom: 16,
+						ext: 'jpg'
+					
+				}
+				);
+				  
+				 backgroundMap.addTo(map);
+				 
+					var hash = new L.Hash(map);
+						let central = L.marker([52.525234335956206, 13.370269939886725]).addTo(map);
+							let popup1 = "If you opened the map when you came to Berlin, you should be located here. Its the Berlin Central station, who would have thought haha";
+							central.bindPopup(popup1); 
+						
+						let turist = L.marker([52.519491677703954, 13.40163590496702]).addTo(map);
+							let popup2 = "This is the Berlin Cathedral. It was built in 1800s and is actually the largest protetant church in wholeeee Germany. I guess you also have to be a little tourist when you come there";
+							turist.bindPopup(popup2); 
+							
+						let zenba = L.marker([52.57448862819111, 13.414409973947087]).addTo(map);
+							let popup3 = "Pankow Schwimmhalle. This is an abandoned swimming pool, but in order to enter you have to be cool and break in. Send me a cool photo and dont get caught!.";
+							zenba.bindPopup(popup3); 
+							
+						let sunek = L.marker([52.54303945000584, 13.403180336116938]).addTo(map);
+							let popup4 = "Mauer park, THE place to smoke a joint. On Sunday you have a flee market, where *only cool, trendy and young Berliners* can be found.";
+							sunek.bindPopup(popup4);
+
+						let hipster = L.marker([52.50791106153788, 13.455005179845642]).addTo(map);
+							let popup5 = "RAW temple, another hipster artistic place, perfect for you ";
+							hipster.bindPopup(popup5);
+							
+						let poljane = L.marker([46.05025754739991, 14.51391229196342]).addTo(map);
+							let popup6 = "This is my highschool, Gimnazija Poljane";
+							poljane.bindPopup(popup6);
+							
+						let dommama = L.marker([46.07039229038773, 14.490601093814497]).addTo(map);
+							let popup7 = "This is my my mom's place and the start of my morning bike route to school";
+							dommama.bindPopup(popup7);
+							
+						let domtata = L.marker([46.02695409459456, 14.534940430589998]).addTo(map);
+							let popup8 = "This is my my dad's place and the start of my morning bike route to school";
+							domtata.bindPopup(popup7);
+						
+						let circle =  L.circle([52.539615268344434, 13.425688212371819], 1200, {
+							  color: 'white',
+							  fillColor: '#ffffff00.',
+							  fillOpacity: 0.05	
+							}).addTo(map);
+							circle.bindPopup("Prenzlauer berg. Apparently this is a nice place to walk around and , maybe drink a glass of sweet wine. On Saturdays they have a nice flee market. ");
+						
+						let circle1 =  L.circle([52.498154933414334, 13.40586008896218], 1800, {
+							  color: 'white',
+							  fillColor: '#ffffff00.',
+							  fillOpacity: 0.05	
+							}).addTo(map);
+							circle1.bindPopup("Kreuzberg, the most alternative district of all.... Says google haha ");
+			
+																					  
+																
+											
+										
+												
+											
+
+
+
+											
+										
+										
+									
+
+		</script>
+
+	</body>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </html>
